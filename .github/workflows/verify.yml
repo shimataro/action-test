@@ -1,9 +1,9 @@
 # https://help.github.com/en/articles/workflow-syntax-for-github-actions
 
 on:
-  pull_request:
-    branches:
-    - "**"
+  issue_comment: # pull_request_comment:
+    types:
+    - created
 name: Verify
 jobs:
   verify:
