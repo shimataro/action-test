@@ -8,6 +8,7 @@ name: Verify
 jobs:
   verify:
     name: Verify
+    if: contains(github.event.comment.html_url, '/pull/')
 #    if: github.event.head_commit.message == 'CI'
     runs-on: ${{ matrix.os }}
     strategy:
